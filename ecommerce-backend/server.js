@@ -11,7 +11,7 @@ const app = express();
 
 // Configure CORS
  app.use(cors({
-  origin: ['http://localhost:3000', 'http://localhost:5002', 'http://localhost:5003', 'http://localhost:5004','https://react-ecommerce-main.onrender.com','https://scintillating-zuccutto-064cbd.netlify.app'],
+  origin: ['http://localhost:3000', 'http://localhost:5002', 'http://localhost:5003', 'http://localhost:5004','https://react-ecommerce-main.onrender.com','https://loquacious-sprite-4b5d7c.netlify.app/'],
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
 })); 

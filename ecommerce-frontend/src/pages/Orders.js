@@ -33,7 +33,7 @@ function Orders() {
     try {
       setLoading(true);
       const token = localStorage.getItem('token');
-      const res = await axios.get(`http://localhost:5001/api/orders/user/${user._id}`, {
+      const res = await axios.get(`https://react-ecommerce-main.onrender.com/api/orders/user/${user._id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       console.log('Fetched orders:', res.data);

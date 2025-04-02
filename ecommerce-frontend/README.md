@@ -1,6 +1,8 @@
 # Getting Started with Create React App
 
 
+```netlify deploy --prod
+
 
 
 

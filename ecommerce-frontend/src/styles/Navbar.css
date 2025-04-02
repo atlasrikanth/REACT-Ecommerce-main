@@ -1,0 +1,399 @@
+/* ecommerce-frontend/src/styles/Navbar.css */
+.flipkart-navbar {
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+
+/* White background for Home route */
+.navbar-white {
+  background-color: #fff;
+  height: 70px;
+}
+ 
+
+/* Blue background for Products, Product Details, and Orders routes */
+.navbar-blue {
+  background-color: #b8cae7;
+  height: 70px;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1280px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+ .navbar-logo {
+  height: 24px;
+  width: auto;
+  padding-right: 20px;
+} 
+
+.search-container {
+  flex: 1;
+  position: relative;
+  margin-left: 20px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  color: white;
+  background-color: white; /* No background */
+  border: none; /* No border */
+  padding: 8px 0; /* Minimal padding */
+}
+
+.search-icon {
+  color: #c7cfde;
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+.search-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  color: #f3f3f3;
+ background-color: #f0f0f0;
+}
+
+.search-input::placeholder {
+  color: #999;
+}
+
+.search-results {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.search-result-item {
+  display: flex;
+  align-items: center;
+  padding: 8px 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.search-result-item:last-child {
+  border-bottom: none;
+}
+
+.search-result-item:hover {
+  background-color: #f5f5f5;
+}
+
+.search-result-image {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  margin-right: 10px;
+  border-radius: 4px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  position: relative;
+  margin-left: 20px;
+}
+
+.nav-link {
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+/* Adjust nav-link color based on navbar background */
+.navbar-white .nav-link {
+  color: #333;
+}
+
+.navbar-blue .nav-link {
+  color: #fff;
+}
+
+.nav-link:hover {
+  color: #2874f0;
+}
+
+.navbar-blue .nav-link:hover {
+  color: #e0e0e0;
+}
+
+.account-info {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.account-info i {
+  margin-left: 5px;
+}
+
+.account-dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  min-width: 150px;
+  z-index: 1000;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.account-dropdown:hover .dropdown-menu {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.dropdown-item {
+  display: block;
+  padding: 10px 15px;
+  color: #333;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.dropdown-item:hover {
+  background-color: #f5f5f5;
+}
+
+.cart-link {
+  position: relative;
+}
+
+.cart-link i {
+  margin-right: 5px;
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: #ff6161;
+  color: #fff;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.bottom-nav {
+  display: none;
+  background-color: #fff;
+  border-top: 1px solid #e0e0e0;
+  padding: 10px 0;
+  z-index: 1000;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.bottom-nav-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #333;
+  text-decoration: none;
+  font-size: 12px;
+  position: relative;
+  padding: 5px 0;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.bottom-nav-item i {
+  font-size: 24px; /* Larger icons */
+  margin-bottom: 6px;
+}
+
+.bottom-nav-item span {
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.bottom-nav-item.active {
+  color: #2874f0;
+  transform: scale(1.1); /* Slight scale for active state */
+}
+
+.bottom-nav-item:hover {
+  color: #2874f0;
+}
+
+.bottom-nav-count {
+  position: absolute;
+  top: 0;
+  right: 30%;
+  background-color: #ff6161;
+  color: #fff;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 10px;
+}
+
+/* Mobile Devices (Below 576px) */
+@media (max-width: 575.98px) {
+  .flipkart-navbar {
+    padding: 8px 15px;
+  }
+
+  .navbar-container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .navbar-logo {
+    height: 50px;
+    width: 90px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .search-container {
+    flex: 1;
+    margin-left: 10px;
+  }
+
+  .search-bar {
+    padding: 6px 0;
+  }
+
+  .search-input {
+    font-size: 13px;
+  }
+
+  .search-results {
+    max-height: 200px;
+    overflow: hidden;
+  }
+
+  .search-result-image {
+    width: 30px;
+    height: 30px;
+  }
+
+  .nav-links {
+    display: none; /* Hide nav links on mobile */
+  }
+
+  .bottom-nav {
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+}
+
+/* Medium Devices (576px to 991.98px) */
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .flipkart-navbar {
+    padding: 10px 15px;
+  }
+
+  .navbar-container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .navbar-logo {
+    .navbar-logo {
+      height: 50px;
+      width: 90px;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  .search-container {
+    flex: 1;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  .search-bar {
+    padding: 7px 0;
+  }
+
+  .search-input {
+    font-size: 14px;
+  }
+
+  .search-results {
+    max-height: 250px;
+    overflow: hidden;
+  }
+
+  .nav-links {
+    display: flex; /* Show nav links on medium devices */
+  }
+
+  .bottom-nav {
+    display: none; /* Hide bottom nav on medium devices */
+  }
+}
+
+/* Desktop Devices (992px and above) */
+@media (min-width: 992px) {
+  .navbar-container {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .nav-link {
+    font-size: 16px;
+  }
+
+  .nav-item {
+    margin-left: 20px;
+  }
+
+  .search-container {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .bottom-nav {
+    display: none;
+  }
+
+  .navbar-logo {
+    height: 50px;
+    width: 90px;
+    margin: 0;
+    padding: 0;
+  }
+}
